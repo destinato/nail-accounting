@@ -1,4 +1,8 @@
-.widget-header {
+.container {
+    margin-left: auto;
+    margin-right: auto;
+
+.container-header {
     height: 50px;
     min-height: 40px;
     padding-right: 10px;
@@ -20,7 +24,7 @@
 
 }
 
-.widget-centr {
+.container-center {
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
@@ -30,9 +34,4 @@
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-.centr {
-    padding-left: 100px;
-    padding-right: 100px;
 }
