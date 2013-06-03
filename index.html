@@ -26,6 +26,55 @@
     <h3>Статистика</h3>
     </div>
 <div class="hero-unit">
+    <p>
+        <button class="btn btn-primary" type="button">Добавить клиента</button>
+    </p>
+    <!-- Button to trigger modal -->
+    <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Добавить клиента</a>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Форма добавления клиента</h3>
+        </div>
+        <div class="modal-body">
+          <div class="main-form">
+            <div class="field">
+            <label>Имя:</label><input type="text">
+            </div>
+            <div class="field">
+                <label>Фамилия:</label><input type="text">
+            </div>
+            <div class="field">
+                <label>Телефон:</label><input type="text">
+            </div>
+              <div class="field">
+                  <label>Категория:</label>
+              <select>
+                  <option>Маникюр</option>
+                  <option>Педикюр</option>
+                  <option>Наращивание</option>
+              </select>
+                  </div>
+              <div class="field">
+                  <label>Сумма:</label><input class="input-small" type="text">
+              </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+            <button class="btn btn-primary">Сохранить</button>
+        </div>
+    </div>
     <table class="table table-bordered">
         <tr class="success">
             <td>Клиент/Дата</td>
