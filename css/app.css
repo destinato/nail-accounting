@@ -1,3 +1,6 @@
+.container {
+    width: 1200px;
+}
 .container-header {
     background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
     border: 1px solid #D4D4D4;
@@ -13,6 +16,4 @@
     padding: 19px;
 }
 
-.field {clear:both; text-align:left; line-height:25px;}
-label {float:left; text-align: right;  width: 100px; padding-right:10px;}
-.main-form {float:left}
+
