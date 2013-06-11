@@ -38,33 +38,33 @@
                 <h3 id="myModalLabel">Форма добавления клиента</h3>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" action="user/add" method=post">
                     <div class="control-group">
                         <label class="control-label" for="inputName">Имя:</label>
 
                         <div class="controls">
-                            <input type="text" id="inputName">
+                            <input type="text" id="inputName" name="client[name]">
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="inputLastName">Фамилия:</label>
 
                     <div class="controls">
-                        <input type="password" id="inputLastName">
+                        <input type="text" id="inputLastName" name="client[last_name]">
                     </div>
             </div>
                     <div class="control-group">
                     <label class="control-label" for="inputPhone">Телефон:</label>
 
                     <div class="controls">
-                        <input type="password" id="inputPhone">
+                        <input type="text" id="inputPhone" name="client[phone]">
                     </div>
             </div>
                     <div class="control-group">
                         <label class="control-label" for="inputSum">Сумма:</label>
 
                         <div class="controls">
-                            <input class="input-small" type="text" id="inputSum">
+                            <input class="input-small" type="text" id="inputSum" name="client[sum]">
                         </div>
                     </div>
 
@@ -80,7 +80,7 @@
         <table class="table table-bordered">
             <tr class="success">
                 <td>Клиент/Дата</td>
-                <td>Январь</td>
+                <td>Январьmmm</td>
                 <td>Февраль</td>
                 <td>Март</td>
                 <td>Апрель</td>
