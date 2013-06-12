@@ -7,5 +7,7 @@ exports.list = function (req, res) {
 };
 exports.create = function (req, res) {
     var userAttributes = req.param('client', null);
+    var mongoose = require('mongoose');
+    mongoose.connect('mongodb://localhost/test');
     console.log(userAttributes);
 }
