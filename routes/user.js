@@ -1,15 +1,4 @@
-/*
- * GET users listing.
- */
-var mongoose = require('mongoose');
-var UserSchema = mongoose.Schema({
-    name: String,
-    last_name: String,
-    phone: String,
-    sum: String
-})
-
-var User = mongoose.model('User', UserSchema)
+var User = require('../models/user').User;
 
 exports.list = function (req, res) {
     res.send("respond with a resource");
