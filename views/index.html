@@ -78,41 +78,19 @@
         </div>
         <table class="table table-bordered">
             <tr class="success">
-                <td>Клиент/Дата</td>
-                <td>Январьmmm</td>
-                <td>Февраль</td>
-                <td>Март</td>
-                <td>Апрель</td>
-                <td>Май</td>
-                <td>Июнь</td>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Телефон</td>
+                <td>Сумма</td>
             </tr>
+            <% users.forEach(function(user,index){%>
             <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td><%= user.name%></td>
+                <td><%= user.last_name%></td>
+                <td><%= user.phone%></td>
+                <td><%= user.sum%></td>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
+            <%})%>
         </table>
     </div>
 </div>

@@ -2,7 +2,10 @@
 /*
  * GET home page.
  */
+var User = require('../models/user').User;
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+    User.find({}).find(function(err, users){
+        res.render('index',{users: users});
+    });
 };

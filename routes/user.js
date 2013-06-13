@@ -9,3 +9,7 @@ exports.create = function (req, res) {
     user.save();
     res.redirect('/');
 }
+
+
+
+
