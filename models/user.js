@@ -16,6 +16,17 @@ var UserSchema = mongoose.Schema({
 
 })
 
+UserSchema.methods.getServiceCountByName = function(name){
+    var count = 0;
+    for (i=0;  i < this.service.length;  i++){
+        if (this.service[i].name== name)
+            count++;
+    }
+
+    return count;
+
+}
+
 var User = mongoose.model('User', UserSchema)
 
 exports.User = User;

@@ -4,6 +4,7 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="/js/underscore.js"></script>
 </head>
 <body>
 
@@ -63,12 +64,12 @@
                     <div class="control-group">
                         <label class="control-label" for="inputService">Услуга:</label>
                         <div class="controls controls-row">
-                            <select class="span2" id="inputService" name="user[service][0][name]">
-                                <option>маникюр</option>
-                                <option>педикюр</option>
-                                <option>наращивание</option>
+                            <select class="span2" id="inputService" name="client[service][0][name]">
+                                <option value="0">маникюр</option>
+                                <option value="1">педикюр</option>
+                                <option value="2">наращивание</option>
                             </select>
-                            <input class="span2" type="text" id="inputSum" name="user[service][0][price]">
+                            <input class="span2" type="text" id="inputSum" name="client[service][0][price]">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -85,14 +86,18 @@
                 <td>Имя</td>
                 <td>Фамилия</td>
                 <td>Телефон</td>
+                <td>Маникюр</td>
                 <td>Сумма</td>
+                <td>Сумма маникюров</td>
             </tr>
             <% users.forEach(function(user,index){%>
             <tr>
                 <td><%= user.name ? user.name : '-'%></td>
                 <td><%= user.last_name ? user.last_name : '-'%></td>
                 <td><%= user.phone ? user.phone : '-'%></td>
+                <td><%= user.service[0] ? user.service[0].name : '-'%></td>
                 <td><%= user.service[0] ? user.service[0].price : '-'%></td>
+                <td><%= user.getServiceCountByName('маникюр') %></td>
             </tr>
             <%})%>
         </table>
