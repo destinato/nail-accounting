@@ -60,12 +60,15 @@
                         <input type="text" id="inputPhone" name="client[phone]">
                     </div>
             </div>
-                    <div class="control-group">
+                    <div class="controls controls-row">
+                        <label class="control-label" for="inputService">Услуга:</label>
+                        <select class="span4" type="text"  id="inputService" name="[service][0][name]">
+                            <option>маникюр</option>
+                            <option>педикюр</option>
+                            <option>наращивание</option>
+                        </select>
                         <label class="control-label" for="inputSum">Сумма:</label>
-
-                        <div class="controls">
-                            <input class="input-small" type="text" id="inputSum" name="client[sum]">
-                        </div>
+                        <input class="span1" type="text"  id="inputSum" name="user[service][0][price]">
                     </div>
                     <div class="modal-footer">
                       <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
@@ -85,10 +88,10 @@
             </tr>
             <% users.forEach(function(user,index){%>
             <tr>
-                <td><%= user.name%></td>
-                <td><%= user.last_name%></td>
-                <td><%= user.phone%></td>
-                <td><%= user.sum%></td>
+                <td><%= user.name ? user.name : '-'%></td>
+                <td><%= user.last_name ? user.last_name : '-'%></td>
+                <td><%= user.phone ? user.phone : '-'%></td>
+                <td><%= user.sum ? user.sum : '-'%></td>
             </tr>
             <%})%>
         </table>
