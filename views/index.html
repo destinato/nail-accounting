@@ -63,12 +63,12 @@
                     <div class="control-group">
                         <label class="control-label" for="inputService">Услуга:</label>
                         <div class="controls controls-row">
-                            <select class="span2" id="inputService" name="[service][0][name]">
+                            <select class="span2" id="inputService" name="user[service][0][name]">
                                 <option>маникюр</option>
                                 <option>педикюр</option>
                                 <option>наращивание</option>
                             </select>
-                            <input class="span1" type="text" id="inputSum" name="user[service][0][price]" placeholder="Цена">
+                            <input class="span2" type="text" id="inputSum" name="user[service][0][price]">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -92,7 +92,7 @@
                 <td><%= user.name ? user.name : '-'%></td>
                 <td><%= user.last_name ? user.last_name : '-'%></td>
                 <td><%= user.phone ? user.phone : '-'%></td>
-                <td><%= user.sum ? user.sum : '-'%></td>
+                <td><%= user.service[0] ? user.service[0].price : '-'%></td>
             </tr>
             <%})%>
         </table>

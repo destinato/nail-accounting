@@ -11,7 +11,9 @@ var UserSchema = mongoose.Schema({
     name: String,
     last_name: String,
     phone: String,
-    sum: String
+    sum: String,
+    service: [{ name: String, price: Number }]
+
 })
 
 var User = mongoose.model('User', UserSchema)
