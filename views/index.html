@@ -38,7 +38,7 @@
                 <h3 id="myModalLabel">Форма добавления клиента</h3>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" action="user/add" method="post">
+                <form class="form form-horizontal" action="user/add" method="post">
                     <div class="control-group">
                         <label class="control-label" for="inputName">Имя:</label>
 
@@ -49,30 +49,31 @@
                     <div class="control-group">
                         <label class="control-label" for="inputLastName">Фамилия:</label>
 
-                    <div class="controls">
-                        <input type="text" id="inputLastName" name="client[last_name]">
+                        <div class="controls">
+                            <input type="text" id="inputLastName" name="client[last_name]">
+                        </div>
                     </div>
-            </div>
                     <div class="control-group">
-                    <label class="control-label" for="inputPhone">Телефон:</label>
+                        <label class="control-label" for="inputPhone">Телефон:</label>
 
-                    <div class="controls">
-                        <input type="text" id="inputPhone" name="client[phone]">
+                        <div class="controls">
+                            <input type="text" id="inputPhone" name="client[phone]">
+                        </div>
                     </div>
-            </div>
-                    <div class="controls controls-row">
+                    <div class="control-group">
                         <label class="control-label" for="inputService">Услуга:</label>
-                        <select class="span4" type="text"  id="inputService" name="[service][0][name]">
-                            <option>маникюр</option>
-                            <option>педикюр</option>
-                            <option>наращивание</option>
-                        </select>
-                        <label class="control-label" for="inputSum">Сумма:</label>
-                        <input class="span1" type="text"  id="inputSum" name="user[service][0][price]">
+                        <div class="controls controls-row">
+                            <select class="span2" id="inputService" name="[service][0][name]">
+                                <option>маникюр</option>
+                                <option>педикюр</option>
+                                <option>наращивание</option>
+                            </select>
+                            <input class="span1" type="text" id="inputSum" name="user[service][0][price]" placeholder="Цена">
+                        </div>
                     </div>
                     <div class="modal-footer">
-                      <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
-                      <button class="btn btn-primary">Сохранить</button>
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+                        <button class="btn btn-primary">Сохранить</button>
                     </div>
                 </form>
 
