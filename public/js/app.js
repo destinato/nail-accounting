@@ -5,8 +5,9 @@
  * Time: 14:43
  * To change this template use File | Settings | File Templates.
  */
-var a = 4;
-var b = 7;
-var c = a+b;
-console.log(c)
-
+$(document).ready(function(){
+    $("table .btn.btn-primar").on('click', function(el){
+        var userId = $(el).data('id');
+        console.log(userId);
+    });
+});
