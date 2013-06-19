@@ -8,6 +8,6 @@
 $(document).ready(function(){
     $("table .btn.btn-primary").on('click', function(ev){
         var userId = $(this).data('id');
-        console.log(userId);
+        $('#userIDService').val(userId);
     });
 });

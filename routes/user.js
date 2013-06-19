@@ -10,6 +10,13 @@ exports.create = function (req, res) {
     res.redirect('/');
 }
 
+exports.addService = function (req, res)   {
+    var serviceAttributes = req.param('service', null);
+    var userId = req.param('userId', null);
+    console.log(serviceAttributes);
+    console.log(userId);
+}
+
 
 
 
