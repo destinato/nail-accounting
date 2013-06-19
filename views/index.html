@@ -102,44 +102,42 @@
                 <td><%= user.service[0] ? user.service[0].price : '-'%></td>
                 <td>
                     <p><a href="#mynewServiceModal" role="button" class="btn btn-primary" data-toggle="modal" data-id="<%= user._id %>">Добавить услугу</a></p>
-
-                    <!-- Modal -->
-                    <div id="mynewServiceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="mynewServiceModallLabel">Форма добавления услуги</h3>
-                        </div>
-                        <div class="modal-body">
-                            <form class="form form-horizontal" action="user/service/edit" method="post" input type="hidden">
-                                <input type="hidden" name="userId" id="userIDService" value=""/>
-
-
-                                <div class="control-group">
-                                    <label class="control-label" for="inputService">Услуга:</label>
-                                    <div class="controls controls-row">
-                                        <select class="span2" id="inputNewService" name="service[name]">
-                                            <option>маникюр</option>
-                                            <option>педикюр</option>
-                                            <option>наращивание</option>
-                                        </select>
-                                        <input class="span2" type="text" id="inputNewSum" name="service[price]">
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
-                                    <button class="btn btn-primary">Сохранить</button>
-                                </div>
-                            </form>
-
-
-                        </div>
-                    </div>
-
-                    </td>
+                </td>
             </tr>
             <%})%>
         </table>
+        <!-- Modal -->
+        <div id="mynewServiceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="mynewServiceModallLabel">Форма добавления услуги</h3>
+            </div>
+            <div class="modal-body">
+                <form class="form form-horizontal" action="user/service/edit" method="post" input type="hidden">
+                    <input type="hidden" name="userId" id="userIDService" value=""/>
+
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputService">Услуга:</label>
+                        <div class="controls controls-row">
+                            <select class="span2" id="inputNewService" name="service[name]">
+                                <option>маникюр</option>
+                                <option>педикюр</option>
+                                <option>наращивание</option>
+                            </select>
+                            <input class="span2" type="text" id="inputNewSum" name="service[price]">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+                        <button class="btn btn-primary">Сохранить</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
     </div>
 </div>
 </body>
