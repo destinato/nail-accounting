@@ -6,8 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 $(document).ready(function(){
-    $("table .btn.btn-primar").on('click', function(el){
-        var userId = $(el).data('id');
+    $("table .btn.btn-primary").on('click', function(ev){
+        var userId = $(this).data('id');
         console.log(userId);
     });
 });
