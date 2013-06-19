@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="/js/underscore.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 </head>
 <body>
 
@@ -65,9 +66,9 @@
                         <label class="control-label" for="inputService">Услуга:</label>
                         <div class="controls controls-row">
                             <select class="span2" id="inputService" name="client[service][0][name]">
-                                <option value="0">маникюр</option>
-                                <option value="1">педикюр</option>
-                                <option value="2">наращивание</option>
+                                <option>маникюр</option>
+                                <option>педикюр</option>
+                                <option>наращивание</option>
                             </select>
                             <input class="span2" type="text" id="inputSum" name="client[service][0][price]">
                         </div>
@@ -87,8 +88,11 @@
                 <td>Фамилия</td>
                 <td>Телефон</td>
                 <td>Маникюр</td>
+                <td>Маникюр</td>
+                <td>Педикюр</td>
+                <td>Наращивание</td>
                 <td>Сумма</td>
-                <td>Сумма маникюров</td>
+                <td>Действия</td>
             </tr>
             <% users.forEach(function(user,index){%>
             <tr>
@@ -96,8 +100,47 @@
                 <td><%= user.last_name ? user.last_name : '-'%></td>
                 <td><%= user.phone ? user.phone : '-'%></td>
                 <td><%= user.service[0] ? user.service[0].name : '-'%></td>
-                <td><%= user.service[0] ? user.service[0].price : '-'%></td>
                 <td><%= user.getServiceCountByName('маникюр') %></td>
+                <td><%= user.getServiceCountByName('педикюр') %></td>
+                <td><%= user.getServiceCountByName('наращивание') %></td>
+                <td><%= user.service[0] ? user.service[0].price : '-'%></td>
+                <td>
+                    <p><a href="#mynewServiceModal" role="button" class="btn btn-primary" data-toggle="modal" data-id="<%= user._id %>">Добавить услугу</a></p>
+
+                    <!-- Modal -->
+                    <div id="mynewServiceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="mynewServiceModallLabel">Форма добавления услуги</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form form-horizontal" action="user/add" method="post">
+
+
+
+                                <div class="control-group">
+                                    <label class="control-label" for="inputService">Услуга:</label>
+                                    <div class="controls controls-row">
+                                        <select class="span2" id="inputNewService" name="service[name]">
+                                            <option>маникюр</option>
+                                            <option>педикюр</option>
+                                            <option>наращивание</option>
+                                        </select>
+                                        <input class="span2" type="text" id="inputNewSum" name="service[price]">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+                                    <button class="btn btn-primary">Сохранить</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                    </td>
             </tr>
             <%})%>
         </table>
