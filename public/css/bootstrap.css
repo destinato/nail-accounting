@@ -229,7 +229,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background: url("../public/img/tiny_grid.png") repeat scroll 0 0 #FAFAFA;
+  background: url("/img/tiny_grid.png") repeat scroll 0 0 #FAFAFA;
 }
 
 a {

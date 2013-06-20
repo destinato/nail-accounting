@@ -13,8 +13,11 @@ exports.create = function (req, res) {
 exports.addService = function (req, res)   {
     var serviceAttributes = req.param('service', null);
     var userId = req.param('userId', null);
-    console.log(serviceAttributes);
-    console.log(userId);
+    User.findOne({_id:userId}, function (err, user) {
+        user.service.push(serviceAttributes);
+        user.save();
+        res.redirect('/');
+    });
 }
 
 

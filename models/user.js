@@ -12,7 +12,7 @@ var UserSchema = mongoose.Schema({
     last_name: String,
     phone: String,
     sum: String,
-    service: [{ name: String, price: Number }]
+    service: [{ name: String, price: Number, date: Date }]
 
 })
 
@@ -24,6 +24,27 @@ UserSchema.methods.getServiceCountByName = function(name){
     }
 
     return count;
+
+}
+
+UserSchema.methods.getServiceTotalByName = function(name){
+    var total = 0;
+    for (i=0;  i < this.service.length;  i++){
+        if (this.service[i].name== name)
+            total = total + this.service[i].price;
+    }
+
+    return total;
+
+}
+
+UserSchema.methods.getServicePriceTotal= function() {
+    var total = 0;
+    for (i=0;  i < this.service.length;  i++){
+            total = total + this.service[i].price;
+    }
+
+    return total;
 
 }
 
