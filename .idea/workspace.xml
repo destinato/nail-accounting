@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac83637-8175-45bd-b11e-730290528ca6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nail-accounting.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9ac83637-8175-45bd-b11e-730290528ca6" time="1371727057937" ignored="false" />
+    <file path="/Dummy.txt" changelist="9ac83637-8175-45bd-b11e-730290528ca6" time="1371727087656" ignored="false" />
     <file path="/index.js" changelist="9ac83637-8175-45bd-b11e-730290528ca6" time="1370864569485" ignored="false" />
     <file path="/user.js" changelist="9ac83637-8175-45bd-b11e-730290528ca6" time="1371722967187" ignored="false" />
     <file path="/a.dummy" changelist="9ac83637-8175-45bd-b11e-730290528ca6" time="1371552364721" ignored="false" />
@@ -323,7 +322,11 @@
       <created>1371726747843</created>
       <updated>1371726747843</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="не работает datepicker">
+      <created>1371727092187</created>
+      <updated>1371727092187</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
