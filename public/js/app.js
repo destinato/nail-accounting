@@ -10,4 +10,6 @@ $(document).ready(function(){
         var userId = $(this).data('id');
         $('#userIDService').val(userId);
     });
+
+    $('#datePicker').datepicker();
 });
